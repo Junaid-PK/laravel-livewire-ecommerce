@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-
+use Illuminate\Support\Str;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -21,9 +21,11 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
+        $product_name=$this->faker->unique()->words($nb=4,$asText=true);
+        $slug=Str::slug($product_name);
         return [
-            'name' => $this->faker->unique()->name(),
-            'slug' => $this->faker->unique()->name(),
+            'name' => $product_name,
+            'slug' => $slug,
             'short_description'=> $this->faker->unique()->name(),
             'description' =>$this->faker->text(),
             'regular_price'=>$this->faker->numberBetween(10,500),

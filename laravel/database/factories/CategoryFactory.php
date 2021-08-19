@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-
+use Illuminate\Support\Str;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -21,9 +21,11 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
+        $category_name=$this->faker->unique()->words($nb=4,$asText=true);
+        $slug=Str::slug($category_name);
         return [
-            'name' => $this->faker->unique()->name(),
-            'slug' => $this->faker->unique()->name()
+            'name' => $category_name,
+            'slug' => $slug
         ];
     }
 }
