@@ -51,7 +51,7 @@
 								</div>
 							</div>
 							<div class="wrap-butons">
-								<a href="#" class="btn add-to-cart">Add to Cart</a>
+								<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}','{{$product->regular_price}}')">Add to Cart</a>
                                 <div class="wrap-btn">
                                     <a href="#" class="btn btn-compare">Add Compare</a>
                                     <a href="#" class="btn btn-wishlist">Add Wishlist</a>
@@ -250,7 +250,7 @@
 									</div>
 									<div class="product-info">
 										<a href="{{ route('product.details',['slug'=>$relateditem->slug])}}" class="product-name"><span>{{$relateditem->name}}</span></a>
-										<div class="wrap-price"><span class="product-price">${{$relateditem->related_price}}</span></div>
+										<div class="wrap-price"><span class="product-price">${{$relateditem->regular_price}}</span></div>
 									</div>
 								</div>
 								@endforeach
