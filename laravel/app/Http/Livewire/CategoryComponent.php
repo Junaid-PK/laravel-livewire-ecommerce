@@ -7,15 +7,16 @@ use App\Models\Product;
 use Livewire\WithPagination;
 use Livewire\Component;
 use Cart;
-class ShopComponent extends Component
+class CategoryComponent extends Component
 {
 
     public $sorting;
     public $pagesize;
-    public function mount(){
+    public $category_slug;
+    public function mount($slug){
         $this->sorting="default";
         $this->pagesize=12;
-        $this->fill(request()->only('search','product_cat','product_cat_id'));
+        $this->category_slug = $slug;
     }
 
     // add product to cart
@@ -29,22 +30,26 @@ class ShopComponent extends Component
     // 
     public function render()
     {
+        $category=Category::where('slug',$this->category_slug)->first();
+        $category_id=$category->id;
+        $category_name=$category->name;
         if($this->sorting == 'date'){
-            $product=Product::orderBy('created_at','DESC')->paginate($this->pagesize);
+            $product=Product::where('category_id',$category_id)->orderBy('created_at','DESC')->paginate($this->pagesize);
         }elseif($this->sorting == 'price'){
-            $product=Product::orderBy('regular_price','ASC')->paginate($this->pagesize);
+            $product=Product::where('category_id',$category_id)->orderBy('regular_price','ASC')->paginate($this->pagesize);
         }
         elseif($this->sorting == 'price-desc'){
-            $product=Product::orderBy('regular_price','DESC')->paginate($this->pagesize);
+            $product=Product::where('category_id',$category_id)->orderBy('regular_price','DESC')->paginate($this->pagesize);
         }else{
-            $product=Product::paginate($this->pagesize);
+            $product=Product::where('category_id',$category_id)->paginate($this->pagesize);
         }
         $categories = Category::all();
 
 
-        return view('livewire.shop-component',[
+        return view('livewire.category-component',[
             'products' => $product,
             'categories' => $categories,
+            'category_name' => $category_name,
         ])->layout('template.template');
     }
 }

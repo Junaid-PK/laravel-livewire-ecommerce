@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Livewire;
+
+use App\Models\Category;
+use Livewire\Component;
+
+class SearchBar extends Component
+{
+    public $search;
+    public $product_cat;
+    public $product_cat_id;
+    public function mount(){
+        $this->product_cat = "All Categories";
+        $this->fill(request()->only('search','product_cat','product_cat_id'));
+    }
+    public function render()
+    {
+        $categories=Category::all();
+        return view('livewire.search-bar',['categories'=>$categories]);
+    }
+}

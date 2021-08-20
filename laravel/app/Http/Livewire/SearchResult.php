@@ -7,11 +7,14 @@ use App\Models\Product;
 use Livewire\WithPagination;
 use Livewire\Component;
 use Cart;
-class ShopComponent extends Component
+class SearchResult extends Component
 {
 
     public $sorting;
     public $pagesize;
+    public $search;
+    public $product_cat;
+    public $product_cat_id;
     public function mount(){
         $this->sorting="default";
         $this->pagesize=12;
@@ -29,22 +32,24 @@ class ShopComponent extends Component
     // 
     public function render()
     {
+
         if($this->sorting == 'date'){
-            $product=Product::orderBy('created_at','DESC')->paginate($this->pagesize);
+            $product=Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->orderBy('created_at','DESC')->paginate($this->pagesize);
         }elseif($this->sorting == 'price'){
-            $product=Product::orderBy('regular_price','ASC')->paginate($this->pagesize);
+            $product=Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->orderBy('regular_price','ASC')->paginate($this->pagesize);
         }
         elseif($this->sorting == 'price-desc'){
-            $product=Product::orderBy('regular_price','DESC')->paginate($this->pagesize);
+            $product=Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->orderBy('regular_price','DESC')->paginate($this->pagesize);
         }else{
-            $product=Product::paginate($this->pagesize);
+            $product=Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->paginate($this->pagesize);
         }
         $categories = Category::all();
 
 
-        return view('livewire.shop-component',[
+        return view('livewire.search-result',[
             'products' => $product,
             'categories' => $categories,
         ])->layout('template.template');
     }
 }
+
