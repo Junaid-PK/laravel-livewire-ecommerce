@@ -39,6 +39,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js') }}"></script>
   <![endif]-->
     <script src="{{ asset('adminAssets/assets/plugins/nprogress/nprogress.js') }}"></script>
+    @livewireStyles
 </head>
 
 
@@ -94,8 +95,14 @@
 
 
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.categories')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.categories') }}">
                                             <span class="nav-text">Categories</span>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.products') }}">
+                                            <span class="nav-text">Products</span>
 
                                         </a>
                                     </li>
@@ -125,7 +132,7 @@
 
 
 
- 
+
                     </ul>
 
                 </div>
@@ -280,7 +287,7 @@
 
 
             <div class="content-wrapper">
-{{$slot}}
+                {{ $slot }}
 
             </div>
 
@@ -322,7 +329,34 @@
     <script src="{{ asset('adminAssets/assets/js/date-range.js') }}"></script>
     <script src="{{ asset('adminAssets/assets/js/map.js') }}"></script>
     <script src="{{ asset('adminAssets/assets/js/custom.js') }}"></script>
-
+    <script type="text/javascript">
+        window.addEventListener('show-model', event => {
+            $('#exampleModalForm').modal('show');
+        })
+        window.addEventListener('hide-model', event => {
+            $('#exampleModalForm').modal('hide');
+        })
+        window.addEventListener('confirm-model', event => {
+            $('#deleteModel').modal('show');
+        })
+        window.addEventListener('hide-confirm-model', event => {
+            $('#deleteModel').modal('hide');
+        })
+        // product modal
+        window.addEventListener('show-product-modal', event => {
+            $('#productModal').modal('show');
+        })
+        window.addEventListener('hide-product-modal', event => {
+            $('#productModal').modal('hide');
+        })
+        window.addEventListener('confirm-product-modal', event => {
+            $('#deleteModal').modal('show');
+        })
+        window.addEventListener('hide-product-confirm-modal', event => {
+            $('#deleteModal').modal('hide');
+        })
+    </script>
+    @livewireScripts
 
 
 
