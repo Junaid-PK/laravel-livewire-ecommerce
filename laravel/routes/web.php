@@ -9,6 +9,7 @@ use App\Http\Livewire\UserDashboardComponent;
 use App\Http\Livewire\AdminDashboardComponent;
 use App\Http\Livewire\AdminHomeCategory;
 use App\Http\Livewire\AdminProduct;
+use App\Http\Livewire\AdminSale;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\Productdetails;
 use App\Http\Livewire\SearchResult;
@@ -34,5 +35,6 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/products',AdminProduct::class)->name('admin.products');
     Route::get('/admin/banners',BannerSlider::class)->name('admin.banners');
     Route::get('/admin/homecategorymanagement',AdminHomeCategory::class)->name('admin.homeCategories');
+    Route::get('/admin/salemanagement',AdminSale::class)->name('admin.sales');
     
 });
