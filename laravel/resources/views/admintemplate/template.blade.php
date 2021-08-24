@@ -16,6 +16,7 @@
     <!-- PLUGINS CSS STYLE -->
     <link href="{{ asset('adminAssets/assets/plugins/toaster/toastr.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('adminAssets/assets/plugins/nprogress/nprogress.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset('adminAssets/assets/plugins/flag-icons/css/flag-icon.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('adminAssets/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}" rel="stylesheet" />
     <link href="{{ asset('adminAssets/assets/plugins/ladda/ladda.min.css') }}" rel="stylesheet" />
@@ -103,6 +104,18 @@
                                     <li>
                                         <a class="sidenav-item-link" href="{{ route('admin.products') }}">
                                             <span class="nav-text">Products</span>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.banners') }}">
+                                            <span class="nav-text">Banners</span>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.homeCategories') }}">
+                                            <span class="nav-text">Manage HomePage Categories</span>
 
                                         </a>
                                     </li>
@@ -329,6 +342,7 @@
     <script src="{{ asset('adminAssets/assets/js/date-range.js') }}"></script>
     <script src="{{ asset('adminAssets/assets/js/map.js') }}"></script>
     <script src="{{ asset('adminAssets/assets/js/custom.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
         window.addEventListener('show-model', event => {
             $('#exampleModalForm').modal('show');
@@ -355,9 +369,26 @@
         window.addEventListener('hide-product-confirm-modal', event => {
             $('#deleteModal').modal('hide');
         })
+        // BannerSlider
+        window.addEventListener('show-banner-modal',event=>{
+            $('#bannerModal').modal('show');
+        })
+        window.addEventListener('show-editbanner-modal',event=>{
+            $('#bannerModal').modal('show');
+        })
+        window.addEventListener('hide-banner-modal',event=>{
+            $('#bannerModal').modal('hide');
+        })
+        window.addEventListener('confirm-banner-modal', event => {
+            $('#deleteModal').modal('show');
+        })
+        window.addEventListener('hide-banner-confirm-modal', event => {
+            $('#deleteModal').modal('hide');
+        })
+        
     </script>
     @livewireScripts
-
+@stack('scripts')
 
 
 </body>
