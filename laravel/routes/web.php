@@ -14,6 +14,7 @@ use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\Productdetails;
 use App\Http\Livewire\SearchResult;
 use App\Http\Livewire\BannerSlider;
+use App\Http\Livewire\Wishlist;
 use Illuminate\Support\Facades\Route;
 
 
@@ -24,6 +25,7 @@ Route::get('/checkout',CheckoutComponent::class);
 Route::get('/product/{slug}',Productdetails::class)->name('product.details');
 Route::get('/category/{slug}',CategoryComponent::class)->name('product.category');
 Route::get('/search',SearchResult::class)->name('product.search');
+Route::get('/wishlist',Wishlist::class)->name('product.wishlist');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
