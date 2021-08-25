@@ -93,7 +93,7 @@
                                 <i class="mdi mdi-view-dashboard-outline"></i>
                                 <span class="nav-text">Dashboard</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="dashboard" data-parent="#sidebar-menu">
+                            <ul class="collapsed" id="dashboard" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
 
 
@@ -126,54 +126,21 @@
                                             <span class="nav-text">Manage Sales</span>
                                         </a>
                                     </li>
-
-
-
-
-
                                     <li>
-                                        <a class="sidenav-item-link" href="analytics.html">
-                                            <span class="nav-text">Analytics</span>
-
-                                            <span class="badge badge-success">new</span>
-
+                                        <a class="sidenav-item-link" href="{{ route('admin.coupons') }}">
+                                            <span class="nav-text">Coupons</span>
                                         </a>
                                     </li>
-
-
-
 
                                 </div>
                             </ul>
                         </li>
 
-
-
-
-
-
                     </ul>
 
                 </div>
 
-                <hr class="separator" />
 
-                <div class="sidebar-footer">
-                    <div class="sidebar-footer-content">
-                        <h6 class="text-uppercase">
-                            Cpu Uses <span class="float-right">40%</span>
-                        </h6>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar active" style="width: 40%;" role="progressbar"></div>
-                        </div>
-                        <h6 class="text-uppercase">
-                            Memory Uses <span class="float-right">65%</span>
-                        </h6>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-warning" style="width: 65%;" role="progressbar"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </aside>
 
@@ -310,19 +277,7 @@
 
             </div>
 
-            <footer class="mt-auto footer">
-                <div class="bg-white copyright">
-                    <p>
-                        &copy; <span id="copy-year">2019</span> Copyright Sleek Dashboard Bootstrap Template by
-                        <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>.
-                    </p>
-                </div>
-                <script>
-                    var d = new Date();
-                    var year = d.getFullYear();
-                    document.getElementById("copy-year").innerHTML = year;
-                </script>
-            </footer>
+
 
         </div>
     </div>
@@ -392,6 +347,22 @@
             $('#deleteModal').modal('show');
         })
         window.addEventListener('hide-banner-confirm-modal', event => {
+            $('#deleteModal').modal('hide');
+        })
+        // Coupon Modal
+        window.addEventListener('show-coupon-modal',event=>{
+            $('#couponModal').modal('show');
+        })
+        window.addEventListener('show-editcoupon-modal',event=>{
+            $('#couponModal').modal('show');
+        })
+        window.addEventListener('hide-coupon-modal',event=>{
+            $('#couponModal').modal('hide');
+        })
+        window.addEventListener('confirm-coupon-modal', event => {
+            $('#deleteModal').modal('show');
+        })
+        window.addEventListener('hide-coupon-confirm-modal', event => {
             $('#deleteModal').modal('hide');
         })
         

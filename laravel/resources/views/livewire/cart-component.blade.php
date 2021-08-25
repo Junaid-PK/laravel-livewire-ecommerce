@@ -56,19 +56,40 @@
 
 				<div class="summary">
 					<div class="order-summary">
-						<h4 class="title-box">Order Summary</h4>
 						<p class="summary-info"><span class="title">Subtotal</span><b class="index">${{Cart::instance('cart')->subtotal()}}</b></p>
+						@if (Session::has('coupon'))
+						<p class="summary-info"><span class="title">Discount  ({{Session::get('coupon')['code']}}) <a class="fa fa-times text-danger" wire:click.prevent='removeCoupon'></a> </span><b class="index">${{$discount}}</b></p>
+						<p class="summary-info"><span class="title">Subtotal with Discount </span><b class="index">${{$subtotalAfterDiscount}}</b></p>
+						<p class="summary-info"><span class="title">Tax  ({{config('cart.tax')}}%)</span><b class="index">${{$taxtotalAfterDiscount}}</b></p>
+						<p class="summary-info"><span class="title">Total </span><b class="index">${{$totalAfterDiscount}}</b></p>
+						@else
 						<p class="summary-info"><span class="title">Tax</span><b class="index">${{Cart::instance('cart')->tax()}}</b></p>
 						<p class="summary-info"><span class="title">Shipping</span><b class="index">Free Shipping</b></p>
 						<p class="summary-info total-info "><span class="title">Total</span><b class="index">${{Cart::instance('cart')->total()}}</b></p>
+						@endif
+						<h4 class="title-box">Order Summary</h4>
 					</div>
+					@if(!Session::has('error'))
 					<div class="checkout-info">
 						<label class="checkbox-field">
-							<input class="frm-input " name="have-code" id="have-code" value="" type="checkbox"><span>I have promo code</span>
+							<input class="frm-input " name="have-code" id="have-code" value="1" type="checkbox" wire:model='haveCouponCode'><span>I have promo code</span>
 						</label>
+						@if (Session::has('error'))
+							<div class="alert alert-danger">{{Session::get('error')}}</div>
+						@endif
+						<div class="row col-lg-4">
+							@if ($haveCouponCode == 1)	
+							<form action="" wire:submit.prevent='validatedCoupon'>
+								<label for="">Coupon Code</label>
+								<input type="text" value="" wire:model='couponCode' placeholder="Enter Code Here">
+								<button class="btn btn-small">Apply</button>
+							</form>
+							@endif
+						</div>
 						<a class="btn btn-checkout" href="checkout.html">Check out</a>
 						<a class="link-to-shop" href="shop.html">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
 					</div>
+					@endif
 					<div class="update-clear">
 						<a class="btn btn-clear" href="#" wire:click.prevent="emptyCart()">Clear Shopping Cart</a>
 						<a class="btn btn-update" href="/cart">Update Shopping Cart</a>

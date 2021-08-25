@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\AdminCategories;
+use App\Http\Livewire\AdminCoupon;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CartComponent;
@@ -38,5 +39,6 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/banners',BannerSlider::class)->name('admin.banners');
     Route::get('/admin/homecategorymanagement',AdminHomeCategory::class)->name('admin.homeCategories');
     Route::get('/admin/salemanagement',AdminSale::class)->name('admin.sales');
+    Route::get('/admin/coupons',AdminCoupon::class)->name('admin.coupons');
     
 });
