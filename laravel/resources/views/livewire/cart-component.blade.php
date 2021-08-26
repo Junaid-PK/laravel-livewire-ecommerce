@@ -15,6 +15,7 @@
 						<strong>Success: </strong>{{Session::get('message')}}
 					</div>
 				@endif
+				@if(Cart::instance('cart')->count()>0)
 				<div class="wrap-iten-in-cart">
 					<h3 class="box-title">Products Name</h3>
 					<ul class="products-cart">
@@ -86,7 +87,7 @@
 							</form>
 							@endif
 						</div>
-						<a class="btn btn-checkout" href="checkout.html">Check out</a>
+						<a class="btn btn-checkout" href="#" wire:click.prevent='checkout'>Check out</a>
 						<a class="link-to-shop" href="shop.html">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
 					</div>
 					@endif
@@ -95,6 +96,13 @@
 						<a class="btn btn-update" href="/cart">Update Shopping Cart</a>
 					</div>
 				</div>
+				@else
+					<div class="text-center">
+						<h1>No Product in the Cart</h1>
+						<a href="/shop" class="btn btn-primary">Continue Shopping</a>
+					</div>
+				@endif
+
 
 				<div class="wrap-show-advance-info-box style-1 box-in-site">
 					<h3 class="title-box">Most Viewed Products</h3>

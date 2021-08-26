@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Coupon;
 use Livewire\Component;
 use Cart;
+use Illuminate\Support\Facades\Auth;
 class CartComponent extends Component
 {
     public $haveCouponCode;
@@ -54,6 +55,42 @@ class CartComponent extends Component
         Cart::instance('cart')->update($rowId,$qty);
         $this->emitTo('cart-count','refreshComponent');
     }
+
+    public function checkout()
+    {
+        # code...
+        if(Auth::check()){
+            return redirect()->route('checkout');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+    public function setAmountForCheckout()
+    {
+        # code...
+        if(!Cart::instance('cart')->count()>0)
+        {
+            session()->forget('checkout');
+            return;
+        }
+        if(session()->has('coupon'))
+        {
+            session()->put('checkout',[
+                'discount'=>$this->discount,
+                'subtotal'=>$this->subtotalAfterDiscount,
+                'tax'=>$this->taxtotalAfterDiscount,
+                'total'=>$this->totalAfterDiscount
+            ]);
+        }
+        else{
+            session()->put('checkout',[
+                'discount'=>0,
+                'subtotal'=>Cart::instance('cart')->subtotal(),
+                'tax'=>Cart::instance('cart')->tax(),
+                'total'=>Cart::instance('cart')->total()
+            ]);
+        }
+    }
     public function decreaseQuantity($rowId)
     {
         $item=Cart::instance('cart')->get($rowId);
@@ -85,6 +122,7 @@ class CartComponent extends Component
                 $this->calculateDiscount();
             }
         }
+        $this->setAmountForCheckout();
         return view('livewire.cart-component')->layout('template.template');
     }
 }
