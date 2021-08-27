@@ -15,7 +15,7 @@ class CreateShippingsTable extends Migration
     {
         Schema::create('shippings', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('order_id')->unsigned();
+            $table->bigInteger('order_id')->unsigned()->nullable();
             $table->string('firstname');
             $table->string('lastname');
             $table->string('mobile');

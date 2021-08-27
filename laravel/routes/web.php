@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\AboutUs;
 use App\Http\Livewire\AdminCategories;
 use App\Http\Livewire\AdminCoupon;
 use App\Http\Livewire\HomeComponent;
@@ -15,6 +16,7 @@ use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\Productdetails;
 use App\Http\Livewire\SearchResult;
 use App\Http\Livewire\BannerSlider;
+use App\Http\Livewire\Contact;
 use App\Http\Livewire\Wishlist;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +30,8 @@ Route::get('/category/{slug}',CategoryComponent::class)->name('product.category'
 Route::get('/search',SearchResult::class)->name('product.search');
 Route::get('/wishlist',Wishlist::class)->name('product.wishlist');
 Route::get('/thankyou',Wishlist::class)->name('thankyou');
+Route::get('/contactUs',Contact::class)->name('contactus');
+Route::get('/aboutUs',AboutUs::class)->name('aboutus');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){

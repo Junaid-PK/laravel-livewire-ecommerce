@@ -30,7 +30,7 @@ Primary use:    Ecommerce
 /*------------------------------------------------------------------
 [Color codes]
 
-    Option Color 1 : #ff2832;
+    Option Color 1 : #FFD523;
 
     Option Color 2 : #365db5;
 
@@ -53,7 +53,7 @@ Primary use:    Ecommerce
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
-	color: #444444;
+	color: #2C2E43;
 	overflow-x: hidden;
 }
 img{
@@ -608,7 +608,7 @@ header.fill-color .main-info-area .right-section .wrap-icon-section .index{
     background: #414141;
 }
 header.fill-color .main-info-area .right-section .wrap-icon-section.minicart .index{
-    background-color: #ff0000;
+    background-color: #FFD523;
 }
 .main-info-area .right-section .wrap-icon-section .index{
 	color: #fff;
@@ -696,11 +696,11 @@ li.menu-item .nav-label.new-label::before{
 }
 
 li.menu-item .nav-label.sale-label{
-	background: #ff2832;
+	background: #FFD523;
 }
 li.menu-item .nav-label.sale-label::before{
-	border-top-color: #ff2832;
-	border-left-color: #ff2832;
+	border-top-color: #FFD523;
+	border-left-color: #FFD523;
 }
 
 .header-nav-section li:not(:last-child)::after{
@@ -720,7 +720,7 @@ li.menu-item .nav-label.sale-label::before{
 	background: transparent;
 }
 .header-style-1 .primary-nav-section{
-	background: #444444;
+	background: #2C2E43;
 }
 .primary{
 	position: relative;
@@ -843,7 +843,7 @@ li.menu-item .nav-label.sale-label::before{
 }
 .product-style-1 .product-info .product-name{
     line-height: 18px;
-    color: #444444;
+    color: #2C2E43;
 }
 .product-style-1 .product-info .product-name span{
     text-align: center !important;
@@ -978,7 +978,7 @@ li.menu-item .nav-label.sale-label::before{
 }
 .wrap-banner.banner-style-3 .sub-title::first-letter{
     font-weight: 600;
-    color: red;
+    color: #FFD523;
     text-decoration: line-through;
 }
 .wrap-banner.banner-style-3 .desc{
@@ -1058,7 +1058,7 @@ li.menu-item .nav-label.sale-label::before{
 }
 .wrap-main-slide .slide-1 .sale-info .price{
     font-weight: 700;
-    color: #ff2832;
+    color: #FFD523;
     font-size: 24px;
 }
 .wrap-main-slide .slide-3 .btn-link,
@@ -1080,7 +1080,7 @@ li.menu-item .nav-label.sale-label::before{
 .wrap-main-slide .slide-2 .f-title{
     font-size: 40px;
     line-height: 35px;
-    color: #ff2832;
+    color: #FFD523;
     font-weight: 700;
     display: inline-block;
     text-transform: uppercase;
@@ -1155,7 +1155,7 @@ li.menu-item .nav-label.sale-label::before{
 .wrap-main-slide .slide-3 .sale-info .price{
     font-weight: 700;
     font-size: 25px;
-    color: #ff2832;
+    color: #FFD523;
 }
 
 /* main slide's animate */
@@ -1589,7 +1589,7 @@ li.menu-item .nav-label.sale-label::before{
     width: 100%;
     /*float: left;*/
     text-align: left;
-    background-color: #ff2832;
+    background-color: #FFD523;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
@@ -1771,12 +1771,12 @@ li.menu-item .nav-label.sale-label::before{
     border-left-color: #365db5;
 }
 .product .product-thumnail .group-flash .flash-item.sale-label{
-    background-color: #ff2832;
+    background-color: #FFD523;
     margin-left: 8px;
 }
 .product .product-thumnail .group-flash .flash-item.sale-label::before{
-    border-top-color: #ff2832;
-    border-left-color: #ff2832;
+    border-top-color: #FFD523;
+    border-left-color: #FFD523;
 }
 .product .product-info .product-name span,
 .product-style-2 .product-info .product-name span{
@@ -1845,7 +1845,7 @@ li.menu-item .nav-label.sale-label::before{
 .product .product-info .wrap-price ins>p,
 .product-style-2 .product-info .wrap-price ins>p{
     font-weight: 600;
-    color: #ff2832;
+    color: #FFD523;
     text-align: left;
     padding-right: 8px;
 }
@@ -2365,7 +2365,7 @@ li.menu-item .nav-label.sale-label::before{
 .product.product-style-3 .product-name span{
     font-size: 13px;
     line-height: 18px;
-    color: #444444;
+    color: #2C2E43;
     margin-top: 11px;
 }
 .product-style-3 a.add-to-cart{
@@ -2482,7 +2482,7 @@ li.menu-item .nav-label.sale-label::before{
 .widget ul li a{
     font-size: 14px;
     line-height: 40px;
-    color: #444444;
+    color: #2C2E43;
 }
 .widget ul li{
     list-style: none;
@@ -2525,7 +2525,7 @@ li.menu-item .nav-label.sale-label::before{
     display: block;
     width: 10px;
     height: 2px;
-    background-color: #444444;
+    background-color: #2C2E43;
     position: absolute;
     top: 50%;
     right: 0;
@@ -2538,7 +2538,7 @@ li.menu-item .nav-label.sale-label::before{
     display: block;
     width: 2px;
     height: 10px;
-    background-color: #444444;
+    background-color: #2C2E43;
     position: absolute;
     top: 15px;
     left: 50%;
@@ -2743,7 +2743,7 @@ li.menu-item .nav-label.sale-label::before{
 .ui-slider-horizontal .ui-slider-handle {
     top: -5px;
     margin-left: 0;
-    background-color: #ff2832;
+    background-color: #FFD523;
 }
 .ui-slider-horizontal .ui-slider-range {
     top: 0;
@@ -2866,7 +2866,7 @@ vertical-align: top;
     border-radius: 50%;
 }
 .product-list-style .product-attribute li .attr-red-color{
-    background-color: #ff2832;
+    background-color: #FFD523;
 }
 .product-list-style .product-attribute li .attr-yellow-color{
     background-color: #ecbf33;
@@ -2896,7 +2896,7 @@ vertical-align: top;
 .product-list-style .advance-info .stock-info p{
     font-size: 13px;
     line-height: 18px;
-    color: #444444;
+    color: #2C2E43;
     text-align: left;
     margin: 0;
     padding: 0 0 6px 0;
@@ -2925,7 +2925,7 @@ vertical-align: top;
 }
 .product-list-style .advance-info .wrap-price ins>p{
     font-weight: 600;
-    color: #ff2832;
+    color: #FFD523;
     text-align: left;
     padding-right: 8px;
 }
@@ -3185,7 +3185,7 @@ vertical-align: top;
     font-weight: 400;
 }
 .wrap-contacts .contact-box label>span{
-    color: #ff2832;
+    color: #FFD523;
     margin: 0;
     padding: 0;
 }
@@ -3196,7 +3196,7 @@ vertical-align: top;
     font-size: 14px;
     line-height: 19px;
     padding: 0 10px 0 10px; 
-    color: #444444;
+    color: #2C2E43;
     border: 1px solid #e6e6e6;
     border-radius: 0;
     outline: none;
@@ -4089,7 +4089,7 @@ article.single-post blockquote p:last-child::after{
     outline: none;
 }
 .wrap-iten-in-cart .products-cart .delete a.btn:hover i{
-    color: #ff2832;
+    color: #FFD523;
 }
 .shopping-cart .summary{
     display: inline-block;
@@ -4488,7 +4488,7 @@ article.single-post blockquote p:last-child::after{
 }
 .wrap-product-detail .detail-info .wrap-price ins>p{
     font-weight: 600;
-    color: #ff2832;
+    color: #FFD523;
     text-align: left;
     padding-right: 8px;
 }
@@ -4506,7 +4506,7 @@ article.single-post blockquote p:last-child::after{
     text-align: left;
 }
 .wrap-product-detail .detail-info .stock-info.in-stock b{
-    color: #ff2832;
+    color: #FFD523;
 }
 .wrap-product-detail .advance-info .tab-control,
 .wrap-product-detail .advance-info .tab-contents{
@@ -4843,7 +4843,7 @@ table.shop_attributes tbody{
     text-transform: uppercase;
 }
 .wrap-address-billing .row-in-form label span{
-    color: #ff2832;
+    color: #FFD523;
 }
 .wrap-address-billing .row-in-form input[type=email],
 .wrap-address-billing .row-in-form input[type=text],
@@ -5594,7 +5594,7 @@ table.shop_attributes tbody{
 }
 .wrap-footer-item .wrap-hotline-footer .phone-number,
 .topbar-menu-area .topbar-menu .label-before.fa-mobile{
-    color: #ff2832 !important;
+    color: #FFD523 !important;
 }
 .fill-color .header-nav-section ul li a{
     color: #ffffff;
@@ -6413,7 +6413,7 @@ background-color: #888888;
         padding: 15px;
     }
     .wrap-main-slide-2 .wrap-banners.type-1 .desc{
-        color: #444444;
+        color: #2C2E43;
     }
 	.topbar-menu-area .topbar-menu.right-menu,
 	.topbar-menu-area .topbar-menu.left-menu{
@@ -6521,7 +6521,7 @@ background-color: #888888;
         text-align: center;
     }
     .wrap-main-slide-3 .item-slide .desc{
-        color: #444444 !important;
+        color: #2C2E43 !important;
     }
     .wrap-main-slide-3 .item-slide .type-1,
     .wrap-main-slide-3 .item-slide .type-2,
@@ -6779,7 +6779,7 @@ background-color: #888888;
     }
     .wrap-main-slide-2 .wrap-banners.type-2 .desc{
         font-size: 14px;
-        color: #444444;
+        color: #2C2E43;
     }
 }
 
@@ -7134,7 +7134,7 @@ background-color: #888888;
 }
 
 .btn-submitx {
-	background: #ff2832;
+	background: #FFD523;
 	font-size: 17px;
 	color: #ffffff;
 	line-height: 19px;

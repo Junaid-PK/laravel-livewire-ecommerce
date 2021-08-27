@@ -13,6 +13,8 @@ class ShopComponent extends Component
 
     public $sorting;
     public $pagesize;
+    use WithPagination;
+    protected $paginationTheme='bootstrap';
     public function mount()
     {
         $this->sorting = "default";

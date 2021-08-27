@@ -81,7 +81,7 @@
                         </p>
                         <p class="row-in-form">
                             <label for="city">Province<span>*</span></label>
-                            <input id="city" type="text" name="city" value="" placeholder="City name"
+                            <input id="province" type="text" name="province" value="" placeholder="City name"
                                 wire:model='state.province'>
 								@error('province')
 								<span class="text-danger">{{$message}}</span>
@@ -146,7 +146,7 @@
                             </p>
                             <p class="row-in-form">
                                 <label for="add">Line 1:</label>
-                                <input id="add" type="text" name="add" value="" placeholder="Street at apartment number"
+                                <input  type="text" value="" placeholder="Street at apartment number"
                                     wire:model='shippingstate.line1'>
 									@error('line1')
 								<span class="text-danger">{{$message}}</span>
@@ -154,7 +154,7 @@
                             </p>
                             <p class="row-in-form">
                                 <label for="add">Line 2:</label>
-                                <input id="add" type="text" name="add" value="" placeholder="Street at apartment number"
+                                <input  type="text"  value="" placeholder="Street at apartment number"
                                     wire:model='shippingstate.line2'>
 									@error('line2')
 								<span class="text-danger">{{$message}}</span>
@@ -178,7 +178,7 @@
                             </p>
                             <p class="row-in-form">
                                 <label for="city">Province<span>*</span></label>
-                                <input id="city" type="text" name="city" value="" placeholder="City name"
+                                <input  type="text"  value="" placeholder="City name"
                                     wire:model='shippingstate.province'>
 									@error('province')
 								<span class="text-danger">{{$message}}</span>
@@ -186,7 +186,7 @@
                             </p>
                             <p class="row-in-form">
                                 <label for="city">Town / City<span>*</span></label>
-                                <input id="city" type="text" name="city" value="" placeholder="City name"
+                                <input  type="text" value="" placeholder="City name"
                                     wire:model='shippingstate.city'>
 									@error('city')
 								<span class="text-danger">{{$message}}</span>

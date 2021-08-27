@@ -72,11 +72,11 @@
                         <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
                             width="30" height="33" viewBox="0 0 30 33">
                             <g fill="none" fill-rule="evenodd">
-                                <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
+                                <path class="logo-fill-blue" fill="red" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
                                 <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
                             </g>
                         </svg>
-                        <span class="brand-name">Sleek Dashboard</span>
+                        <span class="brand-name">E-Dashboard</span>
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
@@ -98,6 +98,11 @@
 
 
 
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.dashboard') }}">
+                                            <span class="nav-text">View All</span>
+                                        </a>
+                                    </li>
                                     <li>
                                         <a class="sidenav-item-link" href="{{ route('admin.categories') }}">
                                             <span class="nav-text">Categories</span>
@@ -131,6 +136,17 @@
                                             <span class="nav-text">Coupons</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.coupons') }}">
+                                            <span class="nav-text">Orders</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.coupons') }}">
+                                            <span class="nav-text">New</span>
+                                        </a>
+                                    </li>
+                                    
 
                                 </div>
                             </ul>
@@ -170,15 +186,7 @@
 
                     <div class="navbar-right ">
                         <ul class="nav navbar-nav">
-                            <!-- Github Link Button -->
-                            <li class="mr-3 github-link">
-                                <a class="btn btn-outline-secondary btn-sm"
-                                    href="https://github.com/tafcoder/sleek-dashboard" target="_blank">
-                                    <span class="mr-2 d-none d-md-inline-block">Source Code</span>
-                                    <i class="mdi mdi-github-circle"></i>
-                                </a>
-
-                            </li>
+                           
                             <li class="dropdown notifications-menu">
                                 <button class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="mdi mdi-bell-outline"></i>

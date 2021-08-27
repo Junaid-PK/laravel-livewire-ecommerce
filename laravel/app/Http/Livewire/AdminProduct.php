@@ -91,6 +91,9 @@ class AdminProduct extends Component
     public function delete()
     {
         $product=Product::find($this->productidbeingdeleted);
+        if($product->image){
+            unlink('asset/images/products'.'/'.$product->image);
+        }
         $product->delete();
         session()->flash('message','Product Deleted');
         $this->dispatchBrowserEvent('hide-product-confirm-modal');

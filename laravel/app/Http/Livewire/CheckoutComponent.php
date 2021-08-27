@@ -112,14 +112,14 @@ class CheckoutComponent extends Component
                 session()->flash('stripe_error','The stripe token was not generated');
                 $this->thankyou = 0;
             }
-            $customer=$Stripe->customer()->create([
+            $customer=$Stripe->customers()->create([
                 'name'=>$this->state['firstname'].''.$this->state['lastname'],
                 'email'=>$this->state['email'],
-                'email'=>$this->state['phone'],
+                'phone'=>$this->state['phone'],
                 'address'=>[
                     'line1'=>$this->state['line1'],
                     'postal_code'=>$this->state['zipcode'],
-                    'city'=>$this->city,
+                    'city'=>$this->state['city'],
                     'state'=>$this->state['province'],
                     'country'=>$this->state['country'],
                 ],
@@ -127,7 +127,7 @@ class CheckoutComponent extends Component
                     'name'=>$this->shippingstate['firstname'].''.$this->shippingstate['lastname'],
                     'line1'=>$this->shippingstate['line1'],
                     'postal_code'=>$this->shippingstate['zipcode'],
-                    'city'=>$this->city,
+                    'city'=>$this->shippingstate['city'],
                     'state'=>$this->shippingstate['province'],
                     'country'=>$this->shippingstate['country'],
                 ],
