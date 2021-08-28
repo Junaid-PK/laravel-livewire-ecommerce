@@ -55,6 +55,8 @@ body{
 	font-size: 13px;
 	color: #2C2E43;
 	overflow-x: hidden;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,209,188,1) 0%, rgba(134,165,255,1) 86%);
 }
 img{
 	max-width: 100%;
@@ -598,24 +600,24 @@ header.fill-color .main-info-area .right-section .wrap-icon-section .title{
 }
 .main-info-area .right-section .wrap-icon-section .title{
 	font-size: 12px;
-	color: #333333;
+	color: #f0f2f5;
 	text-transform: uppercase;
 	font-weight: 600;
 	display: block;
 }
 header.fill-color .main-info-area .right-section .wrap-icon-section .index{
     color: #ffffff;
-    background: #414141;
+    background: #f0f2f5;
 }
 header.fill-color .main-info-area .right-section .wrap-icon-section.minicart .index{
-    background-color: #FFD523;
+    background-color: #4b4a49;
 }
 .main-info-area .right-section .wrap-icon-section .index{
 	color: #fff;
     font-size: 12px;
     line-height: 12px;
     display: block;
-    background: #888;
+    background: #57585a;
     padding: 1.5px 7px;
     border-radius: 2px;
 }
@@ -626,7 +628,7 @@ header.fill-color .main-info-area .right-section .wrap-icon-section .link-direct
     display: block;
     float: left;
     font-size: 25px;
-    color: #aaa;
+    color: #f0f2f5;
     margin: 7px 8px 0 0;
 }
 .main-info-area .right-section .wrap-icon-section .left-info{
@@ -1571,6 +1573,10 @@ li.menu-item .nav-label.sale-label::before{
     max-width: 100%;
     margin-top: 30px;
     font-size: 0;
+    background-color: white;
+    box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+-webkit-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+-moz-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
 }
 .wrap-show-advance-info-box.box-boder .wrap-products{
     border: 1px solid #e6e6e6;
@@ -3267,7 +3273,7 @@ vertical-align: top;
 .wrap-icon-box .right-info b{
     font-size: 14px;
     line-height: 18px;
-    color: #333333;
+    color: #f0f2f5;
     font-weight: 600;
 }
 .wrap-icon-box .right-info p{
@@ -3275,7 +3281,7 @@ vertical-align: top;
     line-height: 18px;
     width: 100%;
     float: left;
-    color: #888888;
+    color: #f0f2f5;
     margin: 0;
 }
 .wrap-special-title{
@@ -3484,6 +3490,8 @@ vertical-align: top;
 }
 .our-team-info{
     margin-bottom: 45px;
+    background-color: white;
+    padding: 1rem;
 }
 .our-team-info .title-box{
     border-top: 1px solid #e6e6e6;
@@ -6176,7 +6184,9 @@ background-color: #888888;
 		padding: 0;
 	}
 }
-
+.main-footer-content .container .row{
+    background-color: #fff;
+}
 @media (max-width: 767px) and (min-width: 520px){
     .main-footer-content .col-lg-4:not(.box-twin-content){
         width: 50%;

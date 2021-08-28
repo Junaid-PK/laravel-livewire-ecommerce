@@ -8,7 +8,9 @@
 					<li class="item-link"><span>Digital & Electronics</span></li>
 				</ul>
 			</div>
-			<div class="row">
+			<div class="row" style="background-color: #fff;box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+			-webkit-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+			-moz-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);">
 
 				<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
 
@@ -104,15 +106,14 @@
 							</li>
 							@endforeach
 						</ul>
-
-					</div>
-
-					<div class="wrap-pagination-info">
 						{{$products->links()}}
 					</div>
+
+					
+					
 				</div><!--end main products area-->
 
-				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">
+				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar" style="padding: 1.2rem">
 					<div class="widget mercado-widget categories-widget">
 						<h2 class="widget-title">All Categories</h2>
 						<div class="widget-content">

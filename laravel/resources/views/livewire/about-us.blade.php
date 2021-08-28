@@ -10,7 +10,9 @@
         </div>
     </div>
     
-    <div class="container">
+    <div class="container" style="background-color: white;padding:2rem;box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+    -webkit-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+    -moz-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);">
         <!-- <div class="main-content-area"> -->
             <div class="aboutus-info style-center">
                 <b class="box-title">Interesting Facts</b>

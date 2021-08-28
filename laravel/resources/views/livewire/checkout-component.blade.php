@@ -8,8 +8,10 @@
                 <li class="item-link"><span>Checkout</span></li>
             </ul>
         </div>
-        <div class=" main-content-area">
-			<form action="" wire:submit.prevent='placeOrder'>
+        <div class=" main-content-area" style="background-color: white;box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+        -webkit-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+        -moz-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);">
+			<form action="" wire:submit.prevent='placeOrder' style="margin: 14px">
             <div class="row">
                 <div class="col-md-12">
 
@@ -230,7 +232,7 @@
                         @enderror
                         </p>
                         <p class="row-in-form">
-                            <label for="cvc">CVC<span>*</span></label>
+                            <label for="cvc">CVV<span>*</span></label>
                             <input id="cvc" type="password" name="cvc" value="" placeholder="CVC"
                                 wire:model='cardstate.cvc'>
                                 @error('cvc')

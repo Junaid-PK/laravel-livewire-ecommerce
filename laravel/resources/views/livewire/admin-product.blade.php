@@ -127,10 +127,10 @@
                                                 placeholder="Enter Product Price" wire:model.defer='state.regularPrice'>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Product Sale Price (OPTIONAL)</label>
+                                            <label for="exampleFormControlInput4">Product Sale Price (OPTIONAL)</label>
                                             <input type="text" class="form-control" id="exampleFormControlInput4"
                                                 placeholder="Enter Product Sale Price"
-                                                wire:model.defer='state.salePrice'>
+                                                wire:model.defer='sale_price'>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Product SKU</label>
@@ -140,7 +140,7 @@
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Make Featured</label>
                                             <select class="form-control" id="exampleFormControlSelect12"
-                                                wire:model.defer='state.featured'>
+                                                wire:model.defer='featured'>
                                                 <option value="0">No</option>
                                                 <option value="1">Yes</option>
                                             </select>
@@ -148,7 +148,7 @@
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Status</label>
                                             <select class="form-control" id="exampleFormControlSelect12"
-                                                wire:model.defer='state.stock_status'>
+                                                wire:model.defer='stock_status'>
                                                 <option value="instock">In Stock</option>
                                                 <option value="outofstock">Out Of Stock</option>
                                             </select>
@@ -162,6 +162,7 @@
                                             <label for="exampleFormControlSelect12">Select Category</label>
                                             <select class="form-control" id="exampleFormControlSelect12"
                                                 wire:model.defer='state.category'>
+                                                <option value="">Select Category</option>
                                                 @foreach ($categories as $item)
                                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                 @endforeach

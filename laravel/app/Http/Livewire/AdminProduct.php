@@ -14,7 +14,10 @@ use Livewire\WithFileUploads;
 class AdminProduct extends Component
 {
     public $state;
+    public $sale_price;
     public $image;
+    public $stock_status;
+    public $featured;
     public $product;
     public $showEditModel = false;
     public $productidbeingdeleted=null;
@@ -29,8 +32,8 @@ class AdminProduct extends Component
     }
     public function mount()
     {
-        $this->state['stock_status']='instock';
-        $this->state['featured']=0;
+        $this->stock_status='instock';
+        $this->featured=0;
     }
     public function addProduct()
     {
@@ -40,12 +43,12 @@ class AdminProduct extends Component
         $product->short_description=$this->state['shortDesc'];
         $product->description=$this->state['desc'];
         $product->regular_price=$this->state['regularPrice'];
-        $product->sale_price=$this->state['salePrice'];
+        $product->sale_price=$this->sale_price;
         $product->SKU=$this->state['sku'];
         $product->quantity=$this->state['quantity'];
         $product->category_id=$this->state['category'];
-        $product->featured=$this->state['featured'];
-        $product->stock_status=$this->state['stock_status'];
+        $product->featured=$this->featured;
+        $product->stock_status=$this->stock_status;
         $imagename=Carbon::now()->timestamp.'.'.$this->image->extension();
         $this->image->storeAs('products',$imagename);
         $product->image=$imagename;
@@ -61,12 +64,12 @@ class AdminProduct extends Component
         $product->short_description=$this->state['shortDesc'];
         $product->description=$this->state['desc'];
         $product->regular_price=$this->state['regularPrice'];
-        $product->sale_price=$this->state['salePrice'];
+        $product->sale_price=$this->sale_price;
         $product->SKU=$this->state['sku'];
         $product->quantity=$this->state['quantity'];
         $product->category_id=$this->state['category'];
-        $product->featured=$this->state['featured'];
-        $product->stock_status=$this->state['stock_status'];
+        $product->featured=$this->featured;
+        $product->stock_status=$this->stock_status;
         $imagename=Carbon::now()->timestamp.'.'.$this->image->extension();
         $this->image->storeAs('products',$imagename);
         $product->image=$imagename;
@@ -80,6 +83,8 @@ class AdminProduct extends Component
         $this->showEditModel = true;
         $this->product=$product;
         $this->state=$product->toArray();
+        $this->stock_status=$product->stock_status;
+        $this->featured=$product->featured;
         $this->dispatchBrowserEvent('show-product-modal');
     }
 

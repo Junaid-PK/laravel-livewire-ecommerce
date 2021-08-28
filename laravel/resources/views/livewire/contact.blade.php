@@ -9,7 +9,9 @@
             </ul>
         </div>
         <div class="row">
-            <div class=" main-content-area">
+            <div class=" main-content-area" style="background-color: white;box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+            -webkit-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);
+            -moz-box-shadow: 2px 3px 108px -2px rgba(82,76,76,0.75);padding:3rem">
                 <div class="wrap-contacts ">
                     <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
                         <div class="contact-box contact-form">
